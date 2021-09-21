@@ -3,6 +3,13 @@ name: Shell Commands
 on: [push]
 
 jobs:
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+       - name: Directory Powershell
+         run: Get-Location
+       - name: Directory bash
+         run: pwd
   run-shell-command:
       runs-on: ubuntu-latest
       steps:
