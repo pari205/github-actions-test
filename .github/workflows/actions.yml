@@ -1,7 +1,17 @@
-name: Actions workflow
+name: Actions workflow test
 
 
-on: [push,pull_request]
+on: 
+  #push:
+  schedule:
+    - cron: "0/5 * * * *"
+    - cron: "0/6 * * * *"
+  pull_request:
+    types:
+       - closed
+       - assigned
+       - opened
+       - reopened
 
 jobs:
    run-github-actions:
