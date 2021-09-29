@@ -3,6 +3,8 @@ name: Actions workflow test
 
 on: 
   repository_dispatch:
+     type: 
+        - "build"
   #push:
   #schedule:
    # - cron: "0/5 * * * *"
@@ -18,6 +20,8 @@ jobs:
    run-github-actions:
       runs-on: ubuntu-latest
       steps:
+         - name:  payload 
+           run: echo ${{gitub.event.client_payload.env}}
          - name: List Files
            run: |
               pwd
