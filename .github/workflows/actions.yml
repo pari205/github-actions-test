@@ -2,10 +2,11 @@ name: Actions workflow test
 
 
 on: 
+  repository_dispatch:
   #push:
-  schedule:
-    - cron: "0/5 * * * *"
-    - cron: "0/6 * * * *"
+  #schedule:
+   # - cron: "0/5 * * * *"
+    #- cron: "0/5 * * * *"
   pull_request:
     types:
        - closed
