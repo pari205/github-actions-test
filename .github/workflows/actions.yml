@@ -2,6 +2,7 @@ name: Actions workflow test
 
 
 on: 
+  repository_dispatch:
   #push:
   #schedule:
    # - cron: "0/5 * * * *"
